@@ -37,4 +37,13 @@ public class PhoneBookTest {
         String expected = "B";
         assertThat(result, Matchers.containsString(expected));
     }
+
+    @Test
+    public void testFindByName() {
+        phoneBook.add("A", "1");
+        phoneBook.add("B", "2");
+        String result = phoneBook.findByName("B");
+        String expected = "2";
+        assertThat(result, Matchers.containsString(expected));
+    }
 }

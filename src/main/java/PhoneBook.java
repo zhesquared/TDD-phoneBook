@@ -17,7 +17,10 @@ public class PhoneBook {
         }
         return null;
     }
+
+    public String findByName(String name) {
+        return null;
+    }
 }
-//findByNumber - найти имя по номеру без полного перебора;
 //findByName - найти номер по имени без полного перебора;
 //printAllNames - вывести все имена в алфавитном порядке без необходимости проводить сортировку.
