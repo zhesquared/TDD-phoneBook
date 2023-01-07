@@ -1,12 +1,15 @@
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+
 
 public class PhoneBookTest {
 
-    private static PhoneBook phoneBook = new PhoneBook();
+    private static final PhoneBook phoneBook = new PhoneBook();
 
     @BeforeAll
     public static void startTesting() {
@@ -23,5 +26,12 @@ public class PhoneBookTest {
         int result = phoneBook.add("A", "1");
         int expected = 1;
         Assertions.assertEquals(expected, result);
+    }
+
+    @Test
+    public void testFindByNumber() {
+        String result = phoneBook.findByNumber("1");
+        String expected = "A";
+        assertThat(result, Matchers.containsString(expected));
     }
 }
