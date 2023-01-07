@@ -23,15 +23,18 @@ public class PhoneBookTest {
 
     @Test
     public void testAddContact() {
-        int result = phoneBook.add("A", "1");
-        int expected = 1;
+        phoneBook.add("A", "1");
+        int result = phoneBook.add("B", "2");
+        int expected = 2;
         Assertions.assertEquals(expected, result);
     }
 
     @Test
     public void testFindByNumber() {
-        String result = phoneBook.findByNumber("1");
-        String expected = "A";
+        phoneBook.add("A", "1");
+        phoneBook.add("B", "2");
+        String result = phoneBook.findByNumber("2");
+        String expected = "B";
         assertThat(result, Matchers.containsString(expected));
     }
 }

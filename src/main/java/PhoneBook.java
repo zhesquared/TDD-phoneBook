@@ -1,4 +1,3 @@
-import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -11,9 +10,13 @@ public class PhoneBook {
     }
 
     public String findByNumber(String number) {
+        for (Map.Entry<String, String> entry : contacts.entrySet()) {
+            if (entry.getValue().equals(number)) {
+                return entry.getKey();
+            }
+        }
         return null;
     }
-
 }
 //findByNumber - найти имя по номеру без полного перебора;
 //findByName - найти номер по имени без полного перебора;
