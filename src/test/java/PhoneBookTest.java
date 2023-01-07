@@ -26,9 +26,8 @@ public class PhoneBookTest {
 
     @Test
     public void testAddContact() {
-        phoneBook.add("A", "1");
-        int result = phoneBook.add("B", "2");
-        int expected = 2;
+        int result = phoneBook.add("A", "1");
+        int expected = 4;
 
         Assertions.assertEquals(expected, result);
     }
