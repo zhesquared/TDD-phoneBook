@@ -1,4 +1,5 @@
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
 public class PhoneBook {
@@ -21,6 +22,9 @@ public class PhoneBook {
     public String findByName(String name) {
         return contacts.get(name);
     }
+
+    public Set<String> printAllNames() {
+        return null;
+    }
 }
-//findByName - найти номер по имени без полного перебора;
 //printAllNames - вывести все имена в алфавитном порядке без необходимости проводить сортировку.
