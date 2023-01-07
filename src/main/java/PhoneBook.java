@@ -24,7 +24,7 @@ public class PhoneBook {
     }
 
     public Set<String> printAllNames() {
-        return null;
+        System.out.println(contacts.keySet());
+        return contacts.keySet();
     }
 }
-//printAllNames - вывести все имена в алфавитном порядке без необходимости проводить сортировку.

@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+
 import java.util.Set;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -59,9 +60,9 @@ public class PhoneBookTest {
         phoneBook.add("A", "1");
         phoneBook.add("B", "2");
 
-        String[] result = (String[]) phoneBook.printAllNames().toArray();
+        Set<String> result = phoneBook.printAllNames();
         String[] expected = {"A", "B", "C", "D"};
 
-        assertThat(result, Matchers.equalTo(expected));
+        assertThat(result.toArray(), Matchers.equalTo(expected));
     }
 }
